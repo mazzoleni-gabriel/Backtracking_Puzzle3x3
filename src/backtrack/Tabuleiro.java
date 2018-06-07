@@ -6,7 +6,6 @@ public class Tabuleiro {
 	
 	public int tab[][] = new int[3][3];
 	public int linha0, coluna0;
-	public int jogada;
 
 	
 	public Tabuleiro() {
@@ -14,7 +13,6 @@ public class Tabuleiro {
     		for(int j=0;j<3;j++)
     			tab[i][j] = -1;
     	}
-		jogada = 0;
 	}
 
 	public void geraTab() {
@@ -62,6 +60,7 @@ public class Tabuleiro {
 			return false;
 		tab[linha0][coluna0] = tab[linha0-1][coluna0];
 		tab[linha0-1][coluna0]= 0;
+		linha0--;
 		
 		return true;
 	}
@@ -71,6 +70,7 @@ public class Tabuleiro {
 			return false;
 		tab[linha0][coluna0] = tab[linha0+1][coluna0];
 		tab[linha0+1][coluna0]= 0;
+		linha0++;
 		
 		return true;
 	}
@@ -80,6 +80,7 @@ public class Tabuleiro {
 			return false;
 		tab[linha0][coluna0] = tab[linha0][coluna0+1];
 		tab[linha0][coluna0+1] = 0;
+		coluna0++;
 		
 		return true;
 	}
@@ -89,6 +90,7 @@ public class Tabuleiro {
 			return false;
 		tab[linha0][coluna0] = tab[linha0][coluna0-1];
 		tab[linha0][coluna0-1] = 0;
+		coluna0--;
 		
 		return true;
 	}
@@ -106,14 +108,29 @@ public class Tabuleiro {
 	public boolean estaOrdenado() {
 		int cont=0;
 		for(int i=0; i<3; i++) {
-    		for(int j=0;j<3;j++)
+    		for(int j=0;j<3;j++) {
     			if(tab[i][j] != cont)
     				return false;
     			cont++;
+    		}
     	}
 		
 		return true;
 	}
+
+	public int[][] getTab() {
+		return tab;
+	}
+
+	public void setTab(int[][] tab) {
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				this.tab[i][j] = tab[i][j];
+			}
+		}
+	}
+	
+	
 	
 	
 
