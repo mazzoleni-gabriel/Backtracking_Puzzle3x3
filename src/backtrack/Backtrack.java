@@ -20,14 +20,19 @@ public class Backtrack {
     			cont++;
     		}
     	}
-//		tabuleiro.setTab(tab);
-//		tabuleiro.coluna0 = 0;
-//		tabuleiro.linha0 = 0;
-//		tabuleiro.down();
-//		tabuleiro.right();
-//		tabuleiro.right();
-//		tabuleiro.down();
-//		tabuleiro.printaTab();
+		tabuleiro.setTab(tab);
+		tabuleiro.coluna0 = 0;
+		tabuleiro.linha0 = 0;
+		tabuleiro.down();
+		tabuleiro.right();
+		tabuleiro.right();
+		tabuleiro.down();
+		tabuleiro.up();
+		tabuleiro.up();
+		tabuleiro.left();
+		tabuleiro.down();
+		tabuleiro.left();
+		tabuleiro.printaTab();
 
 		System.out.println("\nbacktracking...\n");
 		new Arvore2(tabuleiro, 0).backtrackInit();
