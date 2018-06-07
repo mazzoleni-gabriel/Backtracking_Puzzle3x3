@@ -16,7 +16,7 @@ public class Arvore2 {
 	public int backtrackInit() {
 		int r;
 		while((r = this.backtrack())  == -1) {
-//			System.out.println(ultimoNivel);
+			System.out.printf("%d.. ",ultimoNivel+1);
 			ultimoNivel++;
 		}
 		return r;
@@ -65,6 +65,7 @@ public class Arvore2 {
 				this.proxUp = new Arvore2(aux, this.nivel+1);
 				if(aux.estaOrdenado()) {
 					System.out.printf("Ordenado em %d passos", this.nivel+1);
+					proxUp.dado.printaTab();
 					return this.nivel+1;
 				}
 			}
@@ -85,6 +86,7 @@ public class Arvore2 {
 				this.proxDown = new Arvore2(aux, this.nivel+1);
 				if(aux.estaOrdenado()) {
 					System.out.printf("Ordenado em %d passos", this.nivel+1);
+					proxDown.dado.printaTab();
 					return this.nivel+1;
 				}
 			}
@@ -105,6 +107,7 @@ public class Arvore2 {
 				this.proxRight = new Arvore2(aux, this.nivel+1);
 				if(aux.estaOrdenado()) {
 					System.out.printf("Ordenado em %d passos", this.nivel+1);
+					proxRight.dado.printaTab();
 					return this.nivel+1;
 				}
 			}
@@ -125,6 +128,7 @@ public class Arvore2 {
 				this.proxLeft = new Arvore2(aux, this.nivel+1);
 				if(aux.estaOrdenado()) {
 					System.out.printf("Ordenado em %d passos", this.nivel+1);
+					proxLeft.dado.printaTab();
 					return this.nivel+1;
 				}
 			}

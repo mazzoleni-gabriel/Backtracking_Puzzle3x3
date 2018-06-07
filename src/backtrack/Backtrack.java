@@ -27,7 +27,7 @@ public class Backtrack {
 //		tabuleiro.right();
 //		tabuleiro.right();
 //		tabuleiro.down();
-		tabuleiro.printaTab();
+//		tabuleiro.printaTab();
 
 		System.out.println("\nbacktracking...\n");
 		new Arvore2(tabuleiro, 0).backtrackInit();
