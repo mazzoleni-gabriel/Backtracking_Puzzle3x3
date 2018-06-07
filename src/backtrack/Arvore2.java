@@ -25,14 +25,17 @@ public class Arvore2 {
 	
 	public int backtrack() {
 		int r;
-		if((r = up()) != -1)
-			return r; 
-		if((r = down()) != -1)
-			return r; 
-		if((r = left()) != -1)
-			return r; 
-		if((r = right()) != -1)
-			return r; 
+		
+		if(nivel >= ultimoNivel) {
+			if((r = up()) != -1)
+				return r; 
+			if((r = down()) != -1)
+				return r; 
+			if((r = left()) != -1)
+				return r; 
+			if((r = right()) != -1)
+				return r; 
+		}
 		
 //		System.out.printf("nivel: %d UltNivel: %d\n",nivel, ultimoNivel);
 		if(nivel <= ultimoNivel) {

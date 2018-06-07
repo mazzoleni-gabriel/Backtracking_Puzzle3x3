@@ -14,24 +14,24 @@ public class Backtrack {
 		int tab[][] = new int[3][3];
 		int cont=0;
 		
-		for(int i=0; i<3; i++) {
-    		for(int j=0;j<3;j++) {
-    			tab[i][j] = cont;
-    			cont++;
-    		}
-    	}
-		tabuleiro.setTab(tab);
-		tabuleiro.coluna0 = 0;
-		tabuleiro.linha0 = 0;
-		tabuleiro.down();
-		tabuleiro.right();
-		tabuleiro.right();
-		tabuleiro.down();
-		tabuleiro.up();
-		tabuleiro.up();
-		tabuleiro.left();
-		tabuleiro.down();
-		tabuleiro.left();
+//		for(int i=0; i<3; i++) {
+//    		for(int j=0;j<3;j++) {
+//    			tab[i][j] = cont;
+//    			cont++;
+//    		}
+//    	}
+//		tabuleiro.setTab(tab);
+//		tabuleiro.coluna0 = 0;
+//		tabuleiro.linha0 = 0;
+//		tabuleiro.down();
+//		tabuleiro.right();
+//		tabuleiro.right();
+//		tabuleiro.down();
+//		tabuleiro.up();
+//		tabuleiro.up();
+//		tabuleiro.left();
+//		tabuleiro.down();
+//		tabuleiro.left();
 		tabuleiro.printaTab();
 
 		System.out.println("\nbacktracking...\n");
