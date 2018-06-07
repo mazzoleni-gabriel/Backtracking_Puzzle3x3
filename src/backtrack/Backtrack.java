@@ -5,9 +5,11 @@ public class Backtrack {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Tabuleiro tabuleiro =  new Tabuleiro();
-		Tabuleiros tabs = new Tabuleiros();
+//		Tabuleiros tabs = new Tabuleiros();
 
 		tabuleiro.geraTab();
+//		tabuleiro.printaTab();
+//		new Arvore2(tabuleiro, 0).backtrackInit();
 		
 		int tab[][] = new int[3][3];
 		int cont=0;
@@ -18,21 +20,22 @@ public class Backtrack {
     			cont++;
     		}
     	}
-		tabuleiro.setTab(tab);
-		tabuleiro.coluna0 = 0;
-		tabuleiro.linha0 = 0;
-		tabuleiro.down();
-		tabuleiro.right();
+//		tabuleiro.setTab(tab);
+//		tabuleiro.coluna0 = 0;
+//		tabuleiro.linha0 = 0;
+//		tabuleiro.down();
+//		tabuleiro.right();
+//		tabuleiro.right();
+//		tabuleiro.down();
 		tabuleiro.printaTab();
 
-		System.out.println("backtrack\n");
-		Arvore arv = new Arvore(tabuleiro, 0);
-		arv.backtrack();
+		System.out.println("\nbacktracking...\n");
+		new Arvore2(tabuleiro, 0).backtrackInit();
 		
 		
-		System.out.println("tab salvos:");
-		tabs.printatodos();
-//		
+//		System.out.println("tab salvos:");
+//		tabs.printatodos();
+		
 
 	
 	}
